@@ -16,9 +16,10 @@ import javax.validation.constraints.NotNull
 class ServiceApi(private val serviceService : ServiceService ) {
 
     @PostMapping("deploy")
-    fun deploy( @RequestBody deployment : DeploymentRequest) : ResponseEntity<DeploymentResponse>
+    @ResponseBody
+    fun deploy( @RequestBody deployment : DeploymentRequest) : DeploymentResponse
     {
-        return ResponseEntity.ok(DeploymentResponse(serviceService.deploy(deployment.name, deployment.versionNr)));
+        return DeploymentResponse(serviceService.deploy(deployment.name, deployment.versionNr));
     }
 
     @GetMapping("services")

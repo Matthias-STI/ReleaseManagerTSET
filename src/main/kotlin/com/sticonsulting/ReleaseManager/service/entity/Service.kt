@@ -12,7 +12,6 @@ data class Service (
     @GeneratedValue(strategy = GenerationType.AUTO)
     val id : Int?,
 
-    @field:NotBlank(message = "Service must have a name")
     val name : String
     , val versionNr: Int
     , val systemVersionNr: Int) {
