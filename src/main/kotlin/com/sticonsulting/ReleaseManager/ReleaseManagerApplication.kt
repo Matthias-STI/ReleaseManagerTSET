@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class ReleaseManagerApplication
 
 fun main(args: Array<String>) {
-	runApplication<ReleaseManagerApplication>(*args)
+    runApplication<ReleaseManagerApplication>(*args)
 }

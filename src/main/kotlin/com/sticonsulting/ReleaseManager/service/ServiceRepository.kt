@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface ServiceRepository : CrudRepository<Service, Int> {
-    abstract fun getByNameAndVersionNr(name: String, versionNr: Int): Service?
+    fun getByNameAndVersionNr(name: String, versionNr: Int): Service?
 
 }
